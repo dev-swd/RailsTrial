@@ -1,0 +1,10 @@
+<h1>投稿内容編集</h1>
+<%= form_with model: @post, url: "/posts/#{@post.id}", local:true do |f| %>
+  <h4>旅行先</h4>
+  <%= f.text_field :location %>
+  <h4>コメント</h4>
+  <%= f.text_area :text %>
+  <br>
+  <%= f.submit '更新' %>
+<% end %>
+<%= link_to '戻る', post_path(@post.id) %>

@@ -2,4 +2,6 @@
 <p>旅行先</p>
 <% @posts.each do |post| %>
   <span><%= link_to post.location, post_path(post) %></span>
+  <br>
 <% end %>
+<%= link_to '新規投稿', new_post_path %>
