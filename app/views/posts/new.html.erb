@@ -1,9 +1,14 @@
 <h1>新規旅行投稿</h1>
 <%= form_with model: @post, url: '/posts', local:true do |f| %>
-  <h4>旅行先</h4>
+  <%= f.label :location, "旅行先：" %>
   <%= f.text_field :location %>
-  <h4>コメント</h4>
+  <br>
+  <%= f.label :text, "コメント：" %>
+  <br>
   <%= f.text_area :text %>
+  <br>
+  <br>
   <%= f.submit '投稿' %>
 <% end %>
+<br>
 <%= link_to '戻る', posts_path %>
